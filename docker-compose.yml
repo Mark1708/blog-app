@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: blog-db
+    env_file:
+      - ./.env
+    ports:
+      - '5432:5432'
